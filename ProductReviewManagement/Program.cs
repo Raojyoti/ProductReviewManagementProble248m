@@ -39,6 +39,7 @@ namespace ProductReviewManagement
                 Console.WriteLine("1.Display all data\n" +
                     "2.RetreiveTop3Records\n" +
                     "3.FetchRecordsBasedOnRatingAndProductId\n" +
+                    "4.FindingEachCountOfProductId\n" +
                     "15.Exit");
                 int option=Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -59,6 +60,12 @@ namespace ProductReviewManagement
                         Console.Clear();
                         Console.WriteLine("Feaching Records based on Rating and Product Id are:-\n-------------------------------------------------------");
                         ProductReviewManagement.FetchRecordsBasedOnRatingAndProductId(list);
+                        Console.Write("\nPress any key to continue...... ");
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Console.WriteLine("Finding Each count of ProductId are:-\n-----------------------------------");
+                        ProductReviewManagement.FindingEachCountOfProductId(list);
                         Console.Write("\nPress any key to continue...... ");
                         break;
                     case 15:
