@@ -38,6 +38,7 @@ namespace ProductReviewManagement
                 Console.WriteLine("Please Select options");
                 Console.WriteLine("1.Display all data\n" +
                     "2.RetreiveTop3Records\n" +
+                    "3.FetchRecordsBasedOnRatingAndProductId\n" +
                     "15.Exit");
                 int option=Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -52,6 +53,12 @@ namespace ProductReviewManagement
                         Console.Clear();
                         Console.WriteLine("Top three Records are:-\n-----------------------------------");
                         ProductReviewManagement.RetreiveTop3Records(list);
+                        Console.Write("\nPress any key to continue...... ");
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Console.WriteLine("Feaching Records based on Rating and Product Id are:-\n-------------------------------------------------------");
+                        ProductReviewManagement.FetchRecordsBasedOnRatingAndProductId(list);
                         Console.Write("\nPress any key to continue...... ");
                         break;
                     case 15:
