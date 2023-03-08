@@ -64,5 +64,15 @@ namespace ProductReviewManagement
             List<ProductReview> result = list.Skip(5).ToList();
             Program.DisplayProductReviews(result);
         }
+
+        /// <summary>
+        /// UC8- Retrieve all the records from the datatable variable who’s isLike value is true using LINQ.
+        /// </summary>
+        /// <param name="list"></param>
+        public static void FindRecordsWhoseIsLikeValueIsTrue(List<ProductReview> list)
+        {
+            List<ProductReview> result = list.Where(x => x.IsLike == true).OrderBy(x => x.IsLike).ToList();
+            Program.DisplayProductReviews(result);
+        }
     }
 }
