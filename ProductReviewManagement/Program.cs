@@ -37,6 +37,7 @@ namespace ProductReviewManagement
                 Console.Clear();
                 Console.WriteLine("Please Select options");
                 Console.WriteLine("1.Display all data\n" +
+                    "2.RetreiveTop3Records\n" +
                     "15.Exit");
                 int option=Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -45,6 +46,12 @@ namespace ProductReviewManagement
                         Console.Clear();
                         Console.WriteLine("All Records fro the list:-\n-----------------------------------");
                         DisplayProductReviews(list);
+                        Console.Write("\nPress any key to continue...... ");
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Console.WriteLine("Top three Records are:-\n-----------------------------------");
+                        ProductReviewManagement.RetreiveTop3Records(list);
                         Console.Write("\nPress any key to continue...... ");
                         break;
                     case 15:
